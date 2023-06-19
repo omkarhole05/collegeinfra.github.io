@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>college-infra</title>
+
+<style type="text/css">
+
+body{
+
+min-height:100vh;
+}
+/* Common styles for all screen sizes */
+nav {
+  background-color: #ffba00;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+ 
+}
+
+.logo a {
+  color:black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size:20px;
+  
+}
+
+.menu {
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 10px;
+}
+
+.menu li a {
+  color: black;
+  text-align:center;
+  font-weight:bold;
+  z-index:2;
+    
+  text-decoration:none;
+  padding: 8px;
+  
+}
+
+/* Styles for smaller screen sizes */
+ @media only screen and (max-width: 600px){
+  .menu {
+    display: none;
+  }
+  
+  .menu-icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    padding:2px;
+    background-color:white;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    right: 0;
+    background-color:white;
+    padding: 10px;
+    z-index:2;
+  }
+  
+  #menu-toggle:checked ~ .menu li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.div {
+  height: 170px;
+  width: 100%;
+  background-color: #0E2954;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.srch {
+  border-radius: 2px;
+  border: none;
+  height: 38px;
+  width: 280px;
+  padding: 4px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.btn1 {
+  height: 38px;
+  width: 80px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ffba00;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+      
+}
+
+ 
+ /*css for columbs*/
+ .mcol{
+ margin-top:10px;
+ }
+ .col{
+ 
+ width:100%;
+ display:flex;
+ gap:0px;
+ 
+ }
+ 
+ .col1{ 
+ border:1px solid lightgrey;
+ border-left:none;
+ width:50%;
+ height:100px;}
+ 
+ .col2{
+ border:1px solid lightgrey;
+ border-right:none;
+ height:100px;
+ width:50%;
+ }
+ 
+ 
+ h4{
+ text-align:center;
+ padding:40px;
+ color:blue;
+ 
+ }
+ 
+ 
+ a{
+ text-decoration:none;
+ }
+ 
+ 
+ 
+ 
+ .top2{ font-family:Tahoma,Arial,sans-serif;
+ font-weight:bold;
+ color:black;
+ }
+ 
+ 
+ @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+ *{
+ margin: 0;
+ padding: 0;
+ color: #d9d9d9;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+ 
+ }
+ 
+ footer{
+ position: sticky;
+ bottom: 0px;
+ width: 100%;
+ background:#0E2951;
+ top:100%;
+ 
+ }
+ .main-content{
+ display: flex;
+ }
+ .main-content .box{
+ flex-basis: 30%;
+ padding: 10px 20px;
+ }
+ .box h2{
+ font-size: 1rem;
+ font-weight: 600;
+ text-transform: uppercase;
+ }
+ .box .content{
+ margin: 20px 0 0 0;
+ position: relative;
+ }
+ .box .content:before{
+ position: absolute;
+ content: '';
+ top: -10px;
+ height: 1px;
+ width: 100%;
+ background: #1a1a1a;
+ }
+ .box .content:after{
+ position: absolute;
+ content: '';
+ height: 1px;
+ width: 15%;
+ background: #f12020;
+ top: -10px;
+ }
+ .left .content p{
+ text-align: justify;
+ }
+ .left .content .social{
+ margin: 15px 0 0 0;
+ }
+ .left .content .social a{
+ padding: 0 2px;
+ }
+ .left .content .social a span{
+ height: 20px;
+ width: 40px;
+ background: #1a1a1a;
+ line-height: 40px;
+ text-align: center;
+ font-size: 10px;
+ border-radius: 5px;
+ transition: 0.3s;
+ }
+ .left .content .social a span:hover{
+ background: #f12020;
+ }
+ .center .content .fas{
+ font-size: 1rem;
+ background:#1a1a1a;
+ height: 45px;
+ width: 45px;
+ line-height: 25px;
+ text-align: center;
+ border-radius: 50%;
+ transition: 0.3s;
+ cursor: pointer;
+ }
+ .center .content .fas:hover{
+ background: red;
+ }
+ .center .content .text{
+ font-size: 1rem;
+ font-weight: 500;
+ padding-left: 10px;
+ }
+ .center .content .phone{
+ margin: 15px 0;
+ }
+ .right form .text{
+ font-size: 1rem;
+ margin-bottom: 2px;
+ color: #656565;
+ }
+ 
+ .bottom center{
+ padding: 5px;
+ font-size: 0.9375rem;
+ background: #151515;
+ }
+ .bottom center span{
+ color: #656565;
+ }
+ .bottom center a{
+ color: #f12020;
+ text-decoration: none;
+ }
+ .bottom center a:hover{
+ text-decoration: underline;
+ }
+ @media screen and (max-width: 900px) {
+ footer{
+ position: relative;
+ bottom: 0px;
+ }
+ .main-content{
+ flex-wrap: wrap;
+ flex-direction: column;
+ }
+ .main-content .box{
+ margin: 5px 0;
+ }
+ }
+ /*css for footer*/
+ 
+ .slide-card {
+ display: flex;
+ flex-direction: column;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ overflow: hidden;
+ max-width: 200px;
+ margin-bottom: 20px;
+ 
+ }
+ 
+ .slide-card-image img {
+ width: 100%;
+ height: auto;
+ object-fit: cover;
+ }
+ 
+ .slide-card-content {
+ padding: 10px;
+ }
+ 
+ .slide-card-content h4 {
+ margin-top: 5px;
+ }
+ 
+ .slide-card-content p {
+ margin-top: 5px;
+ font-weight: bold;
+ color:black;
+ }
+ 
+ .btnn {
+ display: inline-block;
+ padding: 10px 10px;
+ background-color: #555;
+ color: #fff;
+ text-decoration: none;
+ border-radius: 4px;
+ margin-top:10px;
+ }
+ 
+ .btnn:hover {
+ background-color: #333;
+ }
+ 
+ .flex {
+ margin-top:10px;
+ display: flex;
+ flex-wrap: ;
+ gap:7px;
+ justify-content: space-evenly;
+ flex-direction:row;
+ }
+ @media only screen and (min-width: 600px){
+ 
+ .all{ display:flex;
+ flex-direction:row;
+ justify-content:center;
+ gap:30px;
+ 
+ 
+ }
+ .flex{
+ gap:30px;
+ 
+ }
+ }
+ 
+ 
+ 
+
+.top{
+margin-top:10px;
+ height:40px;
+ width:100%;
+ background-color:#ffba00;
+ text-align:center;
+ padding-top:10px;
+ }
+ 
+
+</style>
+</head>
+
+
+
+
+<body>
+<nav>
+    <div class="logo">
+      <a href="#">COLLEGE-INFRA</a>
+    </div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="menu">
+      <li><a href="homepage.html">Home</a></li>
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+<div class="div" >
+<div>
+<input class="srch" type="search"  placeholder="search for your college ">
+<button class="btn1">FIND</button>
+</div>
+
+</div>
+
+<div class="mcol" >
+<div class="col" >
+
+<div class="col1" >
+<a href="page2.html" ><h4> Engineering</h4></a>
+
+
+</div>
+
+<div class="col2" >
+<a href="#" >
+<h4>Pharmacy</h4></a>
+</div>
+
+
+
+</div>
+
+<div class="col" >
+
+<div class="col1" >
+<a href="#" ><h4>Management</h4></a>
+
+
+</div>
+
+<div class="col2" >
+<a href="#" >
+<h4>Medical</h4></a>
+</div>
+</div>
+</div>
+<div class="top" >
+
+<p class="top2" >TOP COLLEGES</p>
+
+</div>
+
+<div class="all" >
+<div class="flex">
+  <div class="slide-card">
+    <div class="slide-card-image">
+      <img src="https://i.ibb.co/C0Ng1Fd/download.jpg" alt="Image"/>
+    </div>
+    <div class="slide-card-content">
+      <p class="p" >College of engineering,pune </p>
+      <a href="page2.html" class="btnn">view</a>
+    </div>
+  </div>
+
+  <div class="slide-card">
+    <div class="slide-card-image">
+      <img src="https://i.ibb.co/XCLz0Wd/IMG-20230619-173117.jpg" alt="Image"/>
+    </div>
+    <div class="slide-card-content">
+      <p class="p" >Sinhgad academy of engineering,kondhwa</p>
+      <a href="#" class="btnn">view</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="flex">
+  <div class="slide-card">
+    <div class="slide-card-image">
+      <img src="https://i.ibb.co/hdKZkgt/images-1-1.jpg" alt="Image">
+    </div>
+    <div class="slide-card-content">
+      <p class="p" >Ajeenkya DY Patil School of Engineering,lohegaon</p>
+      <a href="#" class="btnn">view</a>
+    </div>
+  </div>
+
+  <div class="slide-card">
+    <div class="slide-card-image">
+      <img src="https://i.ibb.co/N6MyrXD/images-3.jpg" alt="Image"/>
+    </div>
+    <div class="slide-card-content">
+      <p class="p" >Bharati Vidyapeeth of Engineering, Katraj</p>
+      <a href="#" class="btnn">view</a>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<footer>
+    
+      
+       
+      <div class="bottom">
+        <center>
+          <span class="credit">Created By <a href="college infra.html">College-infra</a> | </span>
+          <span class="far fa-copyright"></span><span> 2020 All rights reserved.</span>
+        </center>
+      </div>
+</footer>
+    
+    
+</body>
+</html>
